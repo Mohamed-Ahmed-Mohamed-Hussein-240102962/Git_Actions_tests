@@ -17,3 +17,22 @@ jobs:
       -  name: test execute
          working-directory: "02+Starting+Project/02 Starting Project"
          run: npm run test   
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: pull_code
+        uses:  actions/checkout@v7
+      - name: node version
+        uses: actions/setup-node@v7
+        with:
+          node-version: '18' 
+      - name: npm install
+        run: |
+          cd "02+Starting+Project/02 Starting Project"
+          npm install
+      - name: build code 
+        run : |
+          cd "02+Starting+Project/02 Starting Project"
+          npm run build   s
+      -  name: deploy
+         run  : echo "Deploying"
