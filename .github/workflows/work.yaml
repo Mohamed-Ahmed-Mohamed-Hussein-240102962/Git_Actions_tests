@@ -33,6 +33,6 @@ jobs:
       - name: build code 
         run : |
           cd "02+Starting+Project/02 Starting Project"
-          npm run build   s
+          npm run build   
       -  name: deploy
          run  : echo "Deploying"
