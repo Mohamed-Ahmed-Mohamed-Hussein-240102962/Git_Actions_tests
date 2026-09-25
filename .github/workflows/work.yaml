@@ -18,6 +18,7 @@ jobs:
          working-directory: "02+Starting+Project/02 Starting Project"
          run: npm run test   
   deploy:
+    needs: nodejs
     runs-on: ubuntu-latest
     steps:
       - name: pull_code
