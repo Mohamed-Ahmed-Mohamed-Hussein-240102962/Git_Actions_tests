@@ -17,8 +17,10 @@ jobs:
       -  name: test execute
          working-directory: "02+Starting+Project/02 Starting Project"
          run: npm run test   
-      -  name: contexts
-         run: echo  ${{ toJson(github) }}
+      - name: Dump GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: echo "$GITHUB_CONTEXT"
       
   deploy:
     needs: nodejs
