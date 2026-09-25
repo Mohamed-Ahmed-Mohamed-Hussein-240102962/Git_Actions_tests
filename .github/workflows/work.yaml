@@ -17,6 +17,9 @@ jobs:
       -  name: test execute
          working-directory: "02+Starting+Project/02 Starting Project"
          run: npm run test   
+      -  name: contexts
+         run: echo "{{ toJson($github) }}"
+      
   deploy:
     needs: nodejs
     runs-on: ubuntu-latest
