@@ -23,7 +23,7 @@ jobs:
         run: echo "$GITHUB_CONTEXT"
       
   deploy:
-    needs: nodejs
+
     runs-on: ubuntu-latest
     steps:
       - name: pull_code
@@ -41,4 +41,4 @@ jobs:
           cd "02+Starting+Project/02 Starting Project"
           npm run build   
       -  name: deploy
-         run  : echo "Deploying"
+         run  : eho "Deploying"
